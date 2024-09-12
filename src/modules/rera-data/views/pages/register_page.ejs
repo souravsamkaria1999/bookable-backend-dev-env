@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RERA API | easy to use, fast, and secure</title>
+
+    <!-- Primary Meta Tags -->
+    <meta
+      name="title"
+      content="Play - Free Open Source HTML Bootstrap Template by UIdeck"
+    />
+    <meta
+      name="description"
+      content="Play - Free Open Source HTML Bootstrap Template by UIdeck Team"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://uideck.com/play/" />
+    <meta
+      property="og:title"
+      content="Play - Free Open Source HTML Bootstrap Template by UIdeck"
+    />
+    <meta
+      property="og:description"
+      content="Play - Free Open Source HTML Bootstrap Template by UIdeck Team"
+    />
+    <meta
+      property="og:image"
+      content="https://uideck.com/wp-content/uploads/2021/09/play-meta-bs.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://uideck.com/play/" />
+    <meta
+      property="twitter:title"
+      content="Play - Free Open Source HTML Bootstrap Template by UIdeck"
+    />
+    <meta
+      property="twitter:description"
+      content="Play - Free Open Source HTML Bootstrap Template by UIdeck Team"
+    />
+    <meta
+      property="twitter:image"
+      content="https://uideck.com/wp-content/uploads/2021/09/play-meta-bs.jpg"
+    />
+
+    <!--====== Favicon Icon ======-->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.svg"
+      type="image/svg"
+    />
+
+    <!-- ===== All CSS files ===== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" />
+    <link rel="stylesheet" href="assets/css/ud-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ====== SignUp Start ====== -->
+    <section class="ud-login">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-login-wrapper">
+              <div class="ud-login-logo">
+                <img src="images/logo.png" alt="logo" />
+              </div>
+              <span class="display-3 text-center mb-3">Sign-Up</span>
+              <form id="register-form" class="ud-login-form">
+                <div class="ud-form-group">
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="Enter Your Name"
+                  />
+                </div>
+                <div class="ud-form-group">
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="example@gmail.com"
+                  />
+                </div>
+                <div class="ud-form-group">
+                  <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="*********"
+                  />
+                </div>
+                <div class="ud-form-group">
+                  <input
+                    id="username"
+                    type="text"
+                    name="username"
+                    placeholder="userName@123"
+                  />
+                </div>
+                <div class="ud-form-group">
+                  <input
+                    id="phone"
+                    type="number"
+                    name="phone"
+                    placeholder="Enter Your Phone Number"
+                  />
+                </div>
+                <div class="ud-form-group">
+                  <button type="submit" class="ud-main-btn w-100">
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+
+              <!-- <div class="ud-socials-connect">
+                <p>Connect With</p>
+
+                <ul>
+                  <li>
+                    <a href="javascript:void(0)" class="facebook">
+                      <i class="lni lni-facebook-filled"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" class="twitter">
+                      <i class="lni lni-twitter-filled"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" class="google">
+                      <i class="lni lni-google"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div> -->
+
+              <!-- <a class="forget-pass" href="javascript:void(0)">
+                Forget Password?
+              </a> -->
+              <p class="signup-option">
+                Already a user? <a href="/rera/real-estate/login"> Sign In </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SignUp End ====== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- <script type="text/javascript">
+      const loginForm = document.getElementById("register-form");
+      loginForm.addEventListener("submit", saveRegisterValue);
+
+      async function saveRegisterValue(e) {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const phoneNumber = document.getElementById("phone").value;
+console.log("log");
+        var apiUrl = "http://localhost:3000/inspection/user/register";
+
+        const postData = {
+          name: name,
+          email: email,
+          password: password,
+          userName: username,
+          phoneNumber: phoneNumber,
+          reraAccess: true,
+        };
+
+        try {
+          const res = await fetch(apiUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(postData),
+          });
+          if (res.ok) {
+            window.location.href = "/rera/real-estate/login";
+          }
+          const data = await res.json();
+        } catch (error) {
+          console.log("error");
+        }
+      }
+    </script> -->
+    <script>
+      // ==== for menu scroll
+      const pageLink = document.querySelectorAll(".ud-menu-scroll");
+
+      pageLink.forEach((elem) => {
+        elem.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(elem.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            offsetTop: 1 - 60,
+          });
+        });
+      });
+
+      // section menu active
+      function onScroll(event) {
+        const sections = document.querySelectorAll(".ud-menu-scroll");
+        const scrollPos =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
+
+        for (let i = 0; i < sections.length; i++) {
+          const currLink = sections[i];
+          const val = currLink.getAttribute("href");
+          const refElement = document.querySelector(val);
+          const scrollTopMinus = scrollPos + 73;
+          if (
+            refElement.offsetTop <= scrollTopMinus &&
+            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+          ) {
+            document
+              .querySelector(".ud-menu-scroll")
+              .classList.remove("active");
+            currLink.classList.add("active");
+          } else {
+            currLink.classList.remove("active");
+          }
+        }
+      }
+
+      window.document.addEventListener("scroll", onScroll);
+    </script>
+  </body>
+</html>
